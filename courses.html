@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Yang Mi's webpage</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- sets the width of the viewport to the device width, and sets the initial zoom level to 1.
+        This is necessary for mobile devices, as they have smaller screens than desktops or laptops.-->
+    <link rel="stylesheet" href="portfolio.css">
+    <script src="portfolio.js" defer></script>
+
+</head>
+
+<body>
+    <header>
+        <h1>Mi,Yang</h1>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="resume.html">Resume</a>
+            <a class="active" href="courses.html">Courses</a>
+        </nav>
+    </header>
+
+    <main>
+        <div class="search-c">
+            <div class="level">
+                <button class="button active" onclick="showCourses(this)"> Show all</button>
+                <button class="button" onclick="filterCourses(this, 1)"> Level 1</button>
+                <button class="button" onclick="filterCourses(this, 2)"> Level 2</button>
+                <button class="button" onclick="sortCourses(this)">Sort by level</button>
+            </div>
+            <div class="search">
+                <form>
+                    <input list="t" type="text" placeholder="specific course..." name="search" id="search">
+                    <datalist id="t">
+                        <option value="programming">
+                        <option value="database">
+                    </datalist>
+                    <button type="button" onclick="findCourses(this)"> &#x1F50D;</button>
+                    <!--&#x1F50D; represents the Unicode character for the magnifying glass icon-->
+                </form>
+            </div>
+        </div>
+        <div class="course-c" id="course-c"></div>
+        <button onclick="topFunction()" id="top" title="Go to top">Top</button>
+    </main>
+    <footer>
+        <a href="mailto:mi000002@alqonquinlive.com">Contact me</a>
+    </footer>
+</body>
+
+</html>
